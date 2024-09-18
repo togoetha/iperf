@@ -58,7 +58,7 @@
 int readentropy(void *out, size_t outsize)
 {
     static FILE *frandom;
-    static const char rndfile[] = "/dev/urandom";
+    static const char rndfile[] = "/dev/random";
 
     if (!outsize) return 0;
 
