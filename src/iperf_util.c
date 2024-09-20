@@ -117,9 +117,9 @@ make_cookie(const char *cookie)
     size_t pos;
     static const unsigned char rndchars[] = "abcdefghijklmnopqrstuvwxyz234567";
 
-    readentropy(out, COOKIE_SIZE);
+    //readentropy(out, COOKIE_SIZE);
     for (pos = 0; pos < (COOKIE_SIZE - 1); pos++) {
-        out[pos] = rndchars[out[pos] % (sizeof(rndchars) - 1)];
+        out[pos] = rndchars[pos % (sizeof(rndchars) - 1)];
     }
     out[pos] = '\0';
 }
