@@ -55,7 +55,7 @@
  * Errors are fatal.
  * Returns 0 on success.
  */
-/*int readentropy(void *out, size_t outsize)
+int readentropy(void *out, size_t outsize)
 {
     static FILE *frandom;
     static const char rndfile[] = "/dev/random";
@@ -76,7 +76,7 @@
                       feof(frandom) ? "EOF" : strerror(errno));
     }
     return 0;
-}*/
+}
 
 
 /*
